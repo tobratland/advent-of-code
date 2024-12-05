@@ -17,5 +17,6 @@ jobs:
         uses: tobratland/actions@main
         with:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          file_types: '.rs,.md,.toml' 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
