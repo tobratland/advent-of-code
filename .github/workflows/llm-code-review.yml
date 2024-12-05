@@ -7,6 +7,11 @@ on:
 jobs:
   code_review:
     runs-on: ubuntu-latest
+    permissions:
+      # Grant write permissions to issues and pull requests
+      issues: write
+      pull-requests: write
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -17,6 +22,6 @@ jobs:
         uses: tobratland/actions@main
         with:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          file_types: '.rs,.md,.toml' 
+          file_types: '.rs,.md,.toml'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
