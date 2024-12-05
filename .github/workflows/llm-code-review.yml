@@ -8,9 +8,9 @@ jobs:
   code_review:
     runs-on: ubuntu-latest
     permissions:
-      # Grant write permissions to issues and pull requests
-      issues: write
       pull-requests: write
+      issues: write
+      contents: write
 
     steps:
       - name: Checkout code
