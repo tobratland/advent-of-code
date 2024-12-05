@@ -14,7 +14,7 @@ jobs:
           fetch-depth: 0
 
       - name: Run LLM Code Review
-        uses: tobratland/actions/llm-code-review-action@main
+        uses: tobratland/actions/actions@main
         with:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         env:
